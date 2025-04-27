@@ -1,7 +1,6 @@
 /// <reference types="cypress" />
 
 const perfil = require('../fixtures/perfil.json')
-//const perfil = require('../fixtures/produtos.json')
 
 import produtosPage from "../support/page_objects/produtos.page";
 
@@ -19,7 +18,6 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
   });
 
   it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-      //TODO: Coloque todo o fluxo de teste aqui, considerando as boas práticas e otimizações
       
             //Quero acessar a Loja EBAC 
             cy.login(perfil.usuario , perfil.senha) 
@@ -75,11 +73,6 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
 
             //E validando minha compra ao final 
             cy.get('.woocommerce-notice').should('contain', 'Obrigado. Seu pedido foi recebido')
-
-            
-            
-      
   });
-
 
 })
